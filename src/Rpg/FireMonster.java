@@ -29,6 +29,9 @@ public abstract class FireMonster extends Monster{
         int normalAttack;
         int fireSkill;
         normalAttack = this.getAttack() - target.getDefense();
+        if (normalAttack < 0){
+            normalAttack = 0;
+        }
         if (Math.random() < 0.35){
             System.out.println("스킬 발동!");
             fireSkill = normalAttack + this.getFireSkillDamage();
