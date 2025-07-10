@@ -30,14 +30,14 @@ public class GameManager  {
         for (Monster m : monster) {
             m.info();
         }
-        for (int i = 0; i < monster.size(); i++) {
-            System.out.println(i + "번 째 몬스터 : " + monster.get(i).getName() );
+        for (int i = 0; i < monster.size() ; i++) {
+            System.out.println(i+1 + "번 째 몬스터 : " + monster.get(i).getName() );
         }
 
         Scanner monsterFirst = new Scanner(System.in);
         System.out.println("첫번째 몬스터의 번호를 고르시오");
         int a = monsterFirst.nextInt();
-        if (a < 0 || a >= monster.size()){
+        if (a < 1 || a > monster.size()){
             System.out.println("잘못된 입력입니다.");
         }
 
@@ -45,7 +45,7 @@ public class GameManager  {
         System.out.println("두번째 몬스터의 번호를 고르시오");
         int b = monsterSecond.nextInt();
 
-        if (b < 0 || b >= monster.size()){
+        if (b < 1 || b > monster.size()){
             System.out.println("잘못된 입력입니다.");
         }
 
@@ -53,8 +53,8 @@ public class GameManager  {
         Monster monster2;
 
 
-        monster1 = monster.get(a);
-        monster2 = monster.get(b);
+        monster1 = monster.get(a-1);
+        monster2 = monster.get(b-1);
 
         while (monster1.getHp() > 0 && monster2.getHp() > 0) {
             System.out.println(monster1.getName()+"의 공격!");
