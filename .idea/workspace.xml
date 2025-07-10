@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a5b4a43-7a53-48d2-85a5-86a0b61c3568" name="Changes" comment="first comit">
-      <change afterPath="$PROJECT_DIR$/src/Rpg/NormalMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rpg/FireMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/FireMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rpg/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rpg/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/Monster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +28,12 @@
     &quot;assignee&quot;: &quot;MMJJSY&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MMJJSY/rpgproject&quot;,
-    &quot;accountId&quot;: &quot;668424af-94c0-48d0-abeb-831102f5bfdf&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MMJJSY/Pairproject.git",
+    "accountId": "668424af-94c0-48d0-abeb-831102f5bfdf"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -92,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751941885046</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first comit">
+      <option name="closed" value="true" />
+      <created>1752115556703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752115556703</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
