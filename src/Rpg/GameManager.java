@@ -57,7 +57,7 @@ public class GameManager  {
         monster2 = monster.get(b);
 
         while (monster1.getHp() > 0 && monster2.getHp() > 0) {
-            System.out.println(monster1.getName()+"의 공격");
+            System.out.println(monster1.getName()+"의 공격!");
             int attackDamage = monster1.attack(monster2);
             if(attackDamage < 0 ){
                  attackDamage = 0;
@@ -78,9 +78,9 @@ public class GameManager  {
             monster2 = temp;
 
         }  if(monster2.getHp() <= 0){
-            System.out.println(monster1.getName()+ "이/가 승리했습니다.");
+            System.out.println(monster1.getName()+ " 이/가 승리했습니다.");
         } else {
-            System.out.println(monster2.getName()+ "이/가 승리했습니다.");
+            System.out.println(monster2.getName()+ " 이/가 승리했습니다.");
         }
     }
 }
