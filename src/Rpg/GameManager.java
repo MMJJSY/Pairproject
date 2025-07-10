@@ -37,7 +37,6 @@ public class GameManager  {
         Scanner monsterFirst = new Scanner(System.in);
         System.out.println("첫번째 몬스터의 번호를 고르시오");
         int a = monsterFirst.nextInt();
-
         if (a < 0 || a >= monster.size()){
             System.out.println("잘못된 입력입니다.");
         }
@@ -67,6 +66,7 @@ public class GameManager  {
 
 
             System.out.println("남은 체력 : " + monster2.getName() +" " + monster2.getHp());
+            System.out.println();
 
             try {
                 Thread.sleep(1000);
