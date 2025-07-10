@@ -1,6 +1,6 @@
 package Rpg;
 
-public class FireMonster extends Monster{
+public abstract class FireMonster extends Monster{
 
     int fireSkillDamage;
 
@@ -22,7 +22,22 @@ public class FireMonster extends Monster{
     public void info() {
         System.out.println("이름 : " + super.getName() + ", 체력 : (" + super.getHp() + "/" + super.getHp() + ")" + ", 공격력 : " + super.getAttack() +
                 ", 방어력 : " + super.getDefense() + " 불속성 데미지 : " + this.fireSkillDamage);
+    }
+
+    @Override
+    public int attack(Monster target){
+        int normalAttack;
+        int fireSkill;
+        normalAttack = this.getAttack() - target.getDefense();
+        if (Math.random() < 0.35){
+            System.out.println("스킬 발동!");
+            fireSkill = normalAttack + this.getFireSkillDamage();
+            return  fireSkill;
+        } return normalAttack;
 
     }
 
+
 }
+
+

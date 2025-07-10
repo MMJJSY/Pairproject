@@ -2,7 +2,7 @@ package Rpg;
 
 
 
-public class Monster {
+public abstract class Monster {
     // 필드
     private String name; // 이름
     private int hp; // 체력
@@ -70,14 +70,8 @@ public class Monster {
     public void info() {
         System.out.println("이름 : " + this.name + ", 체력 : (" + this.hp + "/" + this.maxHp + ")" + ", 공격력 : " + this.attack +
                 ", 방어력 : " + this.defense);
-
     }
-
-
-
-
-
-
+    public abstract int attack(Monster target);
 }
 
 

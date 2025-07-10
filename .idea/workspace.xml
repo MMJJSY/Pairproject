@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a5b4a43-7a53-48d2-85a5-86a0b61c3568" name="Changes" comment="first comit">
+      <change afterPath="$PROJECT_DIR$/src/Rpg/NormalMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rpg/FireMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/FireMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rpg/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rpg/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rpg/Monster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +35,20 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MMJJSY/Pairproject.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/MMJJSY/rpgproject&quot;,
     &quot;accountId&quot;: &quot;668424af-94c0-48d0-abeb-831102f5bfdf&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2zWWB1snmlMVDtgWwHZcbRSYMVj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -45,6 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.GameManager.executor&quot;: &quot;Run&quot;,
     &quot;Application.Play.executor&quot;: &quot;Run&quot;,
+    &quot;Application.dsa.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -53,12 +65,9 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\dw\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9a5b4a43-7a53-48d2-85a5-86a0b61c3568" name="Changes" comment="" />
@@ -75,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751941756683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first comit">
+      <option name="closed" value="true" />
+      <created>1751941885046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751941885046</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
