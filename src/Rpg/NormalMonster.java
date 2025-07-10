@@ -11,17 +11,17 @@ public abstract class NormalMonster extends Monster {
     @Override
     public int attack(Monster target) {
         int critical;
-        int attakDamage;
+        int attackDamage;
         if (Math.random() < 0.2) {
             critical = this.getAttack() * 2;
             System.out.println("치명적인 일격!");
             return critical;
         }
-        attakDamage = this.getAttack() - target.getDefense();
-        if (attakDamage < 0) {
+        attackDamage = this.getAttack() - target.getDefense();
+        if (attackDamage < 0) {
             return 0;
         } else {
-            return attakDamage;
+            return attackDamage;
         }
     }
 
