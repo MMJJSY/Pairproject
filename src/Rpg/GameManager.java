@@ -46,26 +46,36 @@ public class GameManager {
             System.out.println(i + 1 + "번 째 몬스터 : " + monster.get(i).getName());
         }
 
-        Scanner monsterFirst = new Scanner(System.in);
-        System.out.println("첫번째 몬스터의 번호를 고르시오");
-        int a = monsterFirst.nextInt();
-        if (a < 1 || a > monster.size()) {
-            System.out.println("잘못된 입력입니다.");
+        Scanner select = new Scanner(System.in);
+
+
+            int a = 0;
+            int b = 0;
+        while (true) {
+            System.out.println("첫번째 몬스터의 번호를 고르시오");
+            a = select.nextInt();
+            if (a < 1 || a > monster.size()) {
+                System.out.println("잘못된 입력입니다.");
+                continue;
+            }
+
+
+                System.out.println("두번째 몬스터의 번호를 고르시오");
+                b = select.nextInt();
+
+                if (b < 1 || b > monster.size()) {
+                    System.out.println("잘못된 입력입니다.");
+                    continue;
+                }
+
+
+            if (a == b) {
+                System.out.println("서로 다른 몬스터를 선택해 주세요");
+                continue;
+            }
+            break;
         }
 
-        Scanner monsterSecond = new Scanner(System.in);
-        System.out.println("두번째 몬스터의 번호를 고르시오");
-        int b = monsterSecond.nextInt();
-
-        if (b < 1 || b > monster.size()) {
-            System.out.println("잘못된 입력입니다.");
-        }
-
-        if (a == b) {
-            System.out.println("서로 다른 몬스터를 선택해 주세요");
-            a=11111;
-            //같은 몬스터를 고르면 한쪽의 피만 줄어드는 것 같아서 이렇게 처리했습니다.
-            //여기서 같은 몬스터 중복 선택 했을 때 다음 코드 진행 안하게 하려면 이렇게 하면 될까요?
 
 
 
@@ -103,7 +113,7 @@ public class GameManager {
             } else {
                 System.out.println(monster2.getName() + " 이/가 승리했습니다.");
             }
-        }
+
     }
 }
 
