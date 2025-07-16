@@ -17,7 +17,7 @@ public class GameManager {
         });
         monster.add(new NormalMonster("스켈레톤", 60, 14, 10) {
         });
-        monster.add(new NormalMonster("트롤", 120, 18, 6) {
+        monster.add(new Troll("트롤", 120, 18, 6) {
         });
         monster.add(new NormalMonster("골렘", 100, 20, 25) {
         });
@@ -33,7 +33,7 @@ public class GameManager {
         });
         monster.add(new FireMonster("이프리트", 140, 22, 18, 35) {
         });
-        monster.add(new FireMonster("헬하운드", 90, 28, 10, 25) {
+        monster.add(new Hellhound("헬하운드", 90, 28, 10, 25) {
         });
         monster.add(new FireMonster("파이어 골렘", 180, 25, 22, 20) {
         });
@@ -52,13 +52,15 @@ public class GameManager {
             int a = 0;
             int b = 0;
         while (true) {
-            System.out.println("첫번째 몬스터의 번호를 고르시오");
-            a = select.nextInt();
-            if (a < 1 || a > monster.size()) {
-                System.out.println("잘못된 입력입니다.");
-                System.out.println();
-                continue;
-            }
+
+                System.out.println("첫번째 몬스터의 번호를 고르시오");
+                a = select.nextInt();
+                if (a < 1 || a > monster.size()) {
+                    System.out.println("잘못된 입력입니다.");
+                    System.out.println();
+                    continue;
+                }
+
 
 
                 System.out.println("두번째 몬스터의 번호를 고르시오");
@@ -71,12 +73,12 @@ public class GameManager {
                 }
 
 
-            if (a == b) {
-                System.out.println("서로 다른 몬스터를 선택해 주세요");
-                System.out.println();
-                continue;
-            }
-            break;
+                if (a == b) {
+                    System.out.println("서로 다른 몬스터를 선택해 주세요");
+                    System.out.println();
+                    continue;
+                }
+                break;
         }
 
 
@@ -102,10 +104,30 @@ public class GameManager {
                 System.out.println();
 
                 try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                if(monster1 instanceof Healable) {
+
+                        if (Math.random() < 0.25) {
+                            System.out.println(monster1.getName() + "의 Heal발동!");
+                            System.out.println(monster1.getName() + "의 체력이 회복되었다.");
+                            ((Healable) monster1).heal();
+                            System.out.println();
+                        }
+
+                }
+
+
+
+                try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
                 Monster temp = monster1;
                 monster1 = monster2;
                 monster2 = temp;
