@@ -19,5 +19,7 @@ public class Troll extends NormalMonster implements Healable {
         }else {
             setHp(getHp() + healAmount);
         }
+        System.out.println(getName()+" 이/가 체력을 " + healAmount + " 회복했습니다.");
+
     }
 }
