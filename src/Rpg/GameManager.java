@@ -56,6 +56,7 @@ public class GameManager {
             a = select.nextInt();
             if (a < 1 || a > monster.size()) {
                 System.out.println("잘못된 입력입니다.");
+                System.out.println();
                 continue;
             }
 
@@ -65,12 +66,14 @@ public class GameManager {
 
                 if (b < 1 || b > monster.size()) {
                     System.out.println("잘못된 입력입니다.");
+                    System.out.println();
                     continue;
                 }
 
 
             if (a == b) {
                 System.out.println("서로 다른 몬스터를 선택해 주세요");
+                System.out.println();
                 continue;
             }
             break;
