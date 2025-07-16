@@ -11,6 +11,13 @@ public class Troll extends NormalMonster implements Healable {
 
     @Override
     public void heal() {
-        setHp(getHp() + (getMaxHp() /10));
+        int healAmount;
+        healAmount = getMaxHp()/10;
+
+        if(getHp()+healAmount > getMaxHp()) {
+            setHp(getMaxHp());
+        }else {
+            setHp(getHp() + healAmount);
+        }
     }
 }

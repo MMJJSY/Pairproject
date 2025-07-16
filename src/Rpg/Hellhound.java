@@ -10,6 +10,13 @@ public class Hellhound extends FireMonster implements Healable {
 
     @Override
     public void heal() {
-        setHp(getHp() + getMaxHp()/5);
+        int healAmount;
+        healAmount = getMaxHp()/5;
+
+        if(getHp()+healAmount > getMaxHp()){
+            setHp(getMaxHp());
+        } else {
+            setHp(getHp() + healAmount);
+        }
     }
 }
