@@ -100,7 +100,7 @@ public class GameManager {
                 monster2.setHp(monster2.getHp() - attackDamage);
 
 
-                System.out.println(monster2.getName() + "의 남은 체력 : " + monster2.getHp());
+                System.out.println(monster2.getName() + "의 남은 체력 : " + monster2.getHp() +"/"+monster2.getMaxHp());
                 System.out.println();
 
                 try {
@@ -114,7 +114,7 @@ public class GameManager {
                         if (Math.random() < 0.25) {
                             System.out.println(monster1.getName() + "의 Heal발동!");
                             ((Healable) monster1).heal();
-                            System.out.println(monster1.getName()+ "의 남은 체력 : " + monster1.getHp());
+                            System.out.println(monster1.getName()+ "의 남은 체력 : " + monster1.getHp()+"/"+monster1.getMaxHp());
                             System.out.println();
                         }
 
