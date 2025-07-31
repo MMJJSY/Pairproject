@@ -43,7 +43,7 @@ public class GameManager {
             m.info();
         }
         for (int i = 0; i < monster.size(); i++) {
-            System.out.println(i + 1 + "번 째 몬스터 : " + monster.get(i).getName());
+            System.out.println(i + 1 + "번 째 몬스터 - " + monster.get(i).info());
         }
 
         Scanner select = new Scanner(System.in);
@@ -133,6 +133,7 @@ public class GameManager {
                 monster2 = temp;
 
             }
+
             if (monster2.getHp() <= 0) {
                 System.out.println(monster1.getName() + " 이/가 승리했습니다.");
             } else {

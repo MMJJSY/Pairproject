@@ -1,5 +1,5 @@
 package Rpg;
 
 public interface Healable {
-    void heal();
+    public abstract void heal();
 }

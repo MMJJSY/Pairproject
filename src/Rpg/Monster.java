@@ -67,10 +67,12 @@ public abstract class Monster {
     }
 
 
-    public void info() {
-        System.out.println("이름 : " + this.name + ", 체력 : (" + this.hp + "/" + this.maxHp + ")" + ", 공격력 : " + this.attack +
-                ", 방어력 : " + this.defense);
+    public String info() {
+
+        return "이름 : " + this.name + ", 체력 : (" + this.hp + "/" + this.maxHp + ")" + ", 공격력 : " + this.attack +
+                ", 방어력 : " + this.defense;
     }
+
     public abstract int attack(Monster target);
 }
 
