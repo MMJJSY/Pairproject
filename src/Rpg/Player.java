@@ -24,11 +24,11 @@ public class Player extends Monster {
     public int attack(Monster target) {
         int damage = 0;
         // 코드 구현 필요
-        if(Math.random() < 0.15){
-            System.out.println( this.getName() + " 크티티컬 히트!");
+        if (Math.random() < 0.15) {
+            System.out.println(this.getName() + " 크티티컬 히트!");
             damage = this.getAttack() * 2;
         } else {
-            damage = this.getAttack()-target.getDefense();
+            damage = this.getAttack() - target.getDefense();
         }
         if (damage <= 0) {
             damage = 0;
@@ -38,18 +38,15 @@ public class Player extends Monster {
 
     public double skillAttack(Monster target) {
         double damage = 0;
-        if (this.mp < 20){
+        if (this.mp < 20) {
             System.out.println("마나가 부족합니다");
         } else {
-            this.setMp(getMp()-20);
+            this.setMp(getMp() - 20);
             System.out.println("파워 어택 스킬 발동!");
             damage = (this.getAttack() * 1.5) - (target.getDefense() * 0.5);
-            if (damage > 0) {
-                return damage;
-            }
-        }
-        return damage;
+        } return Math.max(damage, 0);
     }
+
 
     public void heal() {
         if(this.mp < 15){
