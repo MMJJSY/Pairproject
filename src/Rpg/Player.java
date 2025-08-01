@@ -43,12 +43,12 @@ public class Player extends Monster {
         } else {
             this.setMp(getMp()-20);
             System.out.println("파워 어택 스킬 발동!");
-            damage = (getAttack() * 1.5) - (target.getDefense() * 0.5);
+            damage = (this.getAttack() * 1.5) - (target.getDefense() * 0.5);
             if (damage > 0) {
                 return damage;
             }
         }
-        return Math.max(damage, 0);
+        return damage;
     }
 
     public void heal() {
@@ -82,14 +82,14 @@ public class Player extends Monster {
 
     private void levelUp() {
 
-        this.setExperience(getExperience()-experienceToNext);
+        this.setExperience(this.getExperience()-this.experienceToNext);
         this.setLevel(this.getLevel()+1);
-        this.setExperienceToNext(getLevel() * 120);
-        this.setStatPoints(getStatPoints()+3);
-        this.setMaxHp(getMaxHp()+20);
-        this.setHp(getMaxHp());
-        this.setMaxMp(getMaxMp()+10);
-        this.setMp(getMaxMp());
+        this.setExperienceToNext(this.getLevel() * 120);
+        this.setStatPoints(this.getStatPoints()+3);
+        this.setMaxHp(this.getMaxHp()+20);
+        this.setHp(this.getMaxHp());
+        this.setMaxMp(this.getMaxMp()+10);
+        this.setMp(this.getMaxMp());
         System.out.println("축하합니다! 레벨이 1 상승하였습니다.");
         System.out.println("현재레벨 : " + this.getLevel());
 
@@ -100,6 +100,7 @@ public class Player extends Monster {
         if (this.getStatPoints() <= 0){
             System.out.println("사용 가능한 스탯 포인트가 없습니다.");
         } else {
+            System.out.println("어떤 스탯을 증가시키겠습니까?");
             System.out.println("1.공격력+2, 2.방어력+3, 3.체력+30, 4.마나+20 ");
             Scanner stat = new Scanner(System.in);
             int a;
@@ -108,27 +109,27 @@ public class Player extends Monster {
                 case 1:
                     this.setAttack(this.getAttack()+2);
                     System.out.println("공격력이 2 증가했습니다!");
-                    this.setStatPoints(getStatPoints()-1);
+                    this.setStatPoints(this.getStatPoints()-1);
                     break;
                 case 2:
                     this.setDefense(this.getDefense()+3);
                     System.out.println("방어력이 3 증가했습니다!");
-                    this.setStatPoints(getStatPoints()-1);
+                    this.setStatPoints(this.getStatPoints()-1);
                     break;
                 case 3:
                     this.setMaxHp(this.getMaxHp()+30);
                     if (getHp()+30 <= getMaxHp()){
                     this.setHp(this.getHp()+30);
-                    } else setHp(this.getMaxHp());
+                    } else this.setHp(this.getMaxHp());
                     System.out.println("최대 체력이 30 증가했습니다!");
-                    this.setStatPoints(getStatPoints()-1);
+                    this.setStatPoints(this.getStatPoints()-1);
                     break;
                 case 4:
                     this.setMaxMp(this.getMaxMp()+20);
-                    if (getMp()+20 <= getMaxMp()){
+                    if (this.getMp()+20 <= this.getMaxMp()){
                         this.setMp(this.getMp()+20);
                     } else setMp(this.getMaxMp());
-                    System.out.println("최대 마나가 30 증가했습니다!");
+                    System.out.println("최대 마나가 20 증가했습니다!");
                     this.setStatPoints(getStatPoints()-1);
                     break;
 
