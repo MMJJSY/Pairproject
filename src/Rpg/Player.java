@@ -30,10 +30,7 @@ public class Player extends Monster {
         } else {
             damage = this.getAttack() - target.getDefense();
         }
-        if (damage <= 0) {
-            damage = 0;
-        }
-        return damage;
+        return Math.max(damage, 0);
     }
 
     public double skillAttack(Monster target) {
