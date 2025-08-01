@@ -144,8 +144,8 @@ public class Player extends Monster {
 
     public void restoreMp() {
         if (this.getMp()+10 <= this.getMaxMp()){
-        this.setMp(getMp()+10);
-        } else setMp(getMaxMp());
+        this.setMp(this.getMp()+10);
+        } else setMp(this.getMaxMp());
 
         // 코드 구현 필요
     }
